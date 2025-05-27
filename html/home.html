@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRON'EFREI - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #00274d; /* dark blue */
+      --accent-color: #f4c430;  /* yellow */
+      --light-bg: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--primary-color); 
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white; 
+        font-weight: 600;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        width: 25px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg);
+        width: 30px;
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        width: 30px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: var(--primary-color); /* Changed from light-bg */
+        padding: 1rem 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+
+      .menu-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background-image: url(../images/hero_bg.png); /* Replace with actual image path */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 4rem;
+      font-weight: 900;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .intro {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #f0f0f0;
+    }
+
+    .highlight {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-left: 5px solid var(--accent-color);
+    }
+
+    .highlight h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+
+    footer {
+      padding: 2rem;
+      background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-section {
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header with navigation -->
+  <header>
+
+    <div class="logo">
+      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo"> 
+    </div>
+
+    <!-- Hamburger menu for mobile -->
+    <button class="menu-button" id="menu-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      <ul id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Emissions</a></li>
+         <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <script src="../js/script.js"></script>
+
+  </header>
+
+  <section class="hero">
+    <h1>IRON'EFREI</h1>
+  </section>
+
+  <section class="intro">
+    <h2>What is a Triathlon?</h2>
+    <p>A triathlon is a multisport race that combines swimming, cycling, and running into a single grueling competition. It's a test of endurance, strength, and willpower, attracting athletes from all walks of life.</p>
+    <p>IRON'EFREI is a club that we made here at Efrei with hopes of gathering likeminded that share a deep passion for sports.</p>
+  </section>
+
+  <section class="highlights">
+    <div class="highlight">
+      <h3>Upcoming Events</h3>
+      <p>Check out our latest triathlon events happening across the region. Stay updated and find the next race near you!</p>
+    </div>
+    <div class="highlight">
+      <h3>Training Plans</h3>
+      <p>From beginners to pros, we have training plans to get you race-ready. Improve your stamina, technique, and confidence.</p>
+    </div>
+    <div class="highlight">
+      <h3>Join the Community</h3>
+      <p>Connect with other triathletes, share your progress, and be inspired. We grow stronger together!</p>
+    </div>
+    <div class="highlight">
+      <h3>Get Involved</h3>
+      <p>Want to volunteer, sponsor, or support our mission? There are many ways to contribute to the triathlon movement.</p>
+    </div>
+    <div class="highlight">
+      <h3>Emissions Awareness</h3>
+      <p>Learn how our events are reducing their environmental footprint and how you can help promote sustainable practices in sports.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-section">
+      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo" style="height: 40px;">
+      <p>Inspiring strength, endurance, and unity through triathlons.</p>
+    </div>
+    <div class="footer-section">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>
