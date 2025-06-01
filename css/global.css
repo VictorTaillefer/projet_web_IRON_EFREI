@@ -1,0 +1,498 @@
+/* ====================================================
+   ROOT VARIABLES
+==================================================== */
+:root {
+  --primary-color: #00274d;
+  --accent-color: #f4c430;
+  --light-bg: #f5f5f5;
+}
+
+/* ====================================================
+   BASE STYLES
+==================================================== */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background: url('../images/background_image_hex.png');
+  background-repeat: repeat;
+}
+
+/* ====================================================
+   HEADER / NAVBAR
+==================================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  background: var(--primary-color);
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a,
+.dropdown-trigger {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ====================================================
+   DROPDOWN MENU
+==================================================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--primary-color);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* ====================================================
+   HERO SECTION
+==================================================== */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('../images/hero_bg.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ====================================================
+   INTRO SECTION
+==================================================== */
+.intro {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: url('../images/hex_pattern.png') repeat;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.intro p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* ====================================================
+   TRIATHLON DISTANCE CARDS (FLIP STYLE)
+==================================================== */
+.distances {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.distances h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.distance-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  width: 250px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-back {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ====================================================
+   TRAINING TOPICS (3 CARDS)
+==================================================== */
+.training-topics {
+  position: relative;
+  background: url('../images/background_image_hex.png') repeat;
+  padding: 4rem 2rem;
+  z-index: 1;
+  color: white;
+}
+
+.training-topics::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.card-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.topic-card {
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✨ Add this */
+}
+
+.topic-card:hover {
+  transform: scale(1.05) translateY(-5px); /* ✨ Pop effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* ✨ Deeper shadow */
+  z-index: 2;
+}
+
+.topic-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem;
+  color: var(--primary-color);
+}
+
+.card-content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.learn-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.learn-btn:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* ====================================================
+   HIGHLIGHTS SECTION
+==================================================== */
+.highlights.auto-scroll {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  background: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.highlights.auto-scroll::before,
+.highlights.auto-scroll::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.highlights.auto-scroll::before {
+  left: 0;
+  background: linear-gradient(to right, #f0f0f0 0%, transparent 100%);
+}
+
+.highlights.auto-scroll::after {
+  right: 0;
+  background: linear-gradient(to left, #f0f0f0 0%, transparent 100%);
+}
+
+.highlights.auto-scroll .highlight-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-left 40s linear infinite;
+}
+
+.highlight {
+  flex: 0 0 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--accent-color);
+  scroll-snap-align: start;
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.highlight {
+  flex: 0 0 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--accent-color);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.highlight h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.highlight h3 a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
+/* ====================================================
+   FOOTER
+==================================================== */
+.site-footer {
+  background-color: #111;
+  color: #eee;
+  padding: 2rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1.5rem;
+}
+
+.footer-brand img {
+  height: 40px;
+  margin-bottom: 0.8rem;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+.footer-links.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.footer-group h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.footer-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-group li {
+  margin: 0.3rem 0;
+}
+
+/* Yellow links and underline on hover */
+.footer-group h4 a,
+.footer-group li a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-group h4 a:hover,
+.footer-group li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+
+.dropdown-menu {
+  display: none !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block !important;
+}

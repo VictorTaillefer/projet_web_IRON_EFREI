@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IRON'EFREI - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../css/styles.css">
-  <script type="text/javascript" src="../js/script.js"></script>
+  <link rel="stylesheet" href="../css/global.css">
+  <script src="../js/script.js"></script>
+
 </head>
 
 <body>
@@ -19,33 +20,35 @@
       <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
     </div>
 
-    <!-- Hamburger menu for mobile -->
-    <button class="menu-button" id="menu-button">
-      <span></span>
-      <span></span>
-      <span></span>
-      </div>
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      <ul id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
 
-      <!-- Navigation links -->
-      <nav class="nav-links">
-        <ul id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Training</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Emissions</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <script src="../js/script.js"></script>
+        <li class="dropdown">
+          <span class="dropdown-trigger">Training ▾</span>
+          <ul class="dropdown-menu">
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recovery.html">Recover</a></li>
+          </ul>
+        </li>
+
+        <li><a href="emissions.html">Community</a></li>
+        <li><a href="emissions.html">Emissions</a></li>
+      </ul>
+    </nav>
 
   </header>
 
+  <!-- MAIN BODY -->
   <section class="hero">
     <h1>IRON'EFREI</h1>
   </section>
 
+  <!-- Introduction Paragraphs -->
   <section class="intro">
     <h2>What is a Triathlon?</h2>
     <p>A triathlon is a multisport race that combines swimming, cycling, and running into a single grueling competition.
@@ -54,47 +57,236 @@
       sports.</p>
   </section>
 
-  <section class="highlights">
-    <div class="highlight">
-      <h3>Upcoming Events</h3>
-      <p>Check out our latest triathlon events happening across the region. Stay updated and find the next race near
-        you!</p>
-    </div>
-    <div class="highlight">
-      <h3>Training Plans</h3>
-      <p>From beginners to pros, we have training plans to get you race-ready. Improve your stamina, technique, and
-        confidence.</p>
-    </div>
-    <div class="highlight">
-      <h3>Join the Community</h3>
-      <p>Connect with other triathletes, share your progress, and be inspired. We grow stronger together!</p>
-    </div>
-    <div class="highlight">
-      <h3>Get Involved</h3>
-      <p>Want to volunteer, sponsor, or support our mission? There are many ways to contribute to the triathlon
-        movement.</p>
-    </div>
-    <div class="highlight">
-      <h3>Emissions Awareness</h3>
-      <p>Learn how our events are reducing their environmental footprint and how you can help promote sustainable
-        practices in sports.</p>
+  <!-- Triathlon Distance Cards -->
+  <section class="distances">
+    <h2>Triathlon Distances</h2>
+    <div class="distance-grid">
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_sprint.png');"></div>
+          <div class="flip-card-back">
+            <p><strong>Sprint Distance:</strong> Maximum effort, minimum distance. <br> This distance is considered one
+              of the hardest, having to go all out for the entire race.
+              <br></br>
+              Distance :<br> 750m swim<br> 20km bike<br> 5km run
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_olympic.png');"></div>
+          <div class="flip-card-back">
+            <p> <strong>Olympic Distance:</strong>
+              Maximum effort, extended distance. Requires a sustained high effort across all three disciplines,
+              demanding both speed and endurance.
+              <br></br>
+              Distance: <br> 1.5km swim <br> 40km bike <br> 10km run
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_70.3.png');"></div>
+          <div class="flip-card-back">
+            <p> <strong>Half Ironman:</strong>
+              Maximum effort, extended distance. Requires a sustained high effort across all three disciplines,
+              demanding both speed and endurance.
+              <br></br>
+              Distance: <br> 1.5km swim <br> 40km bike <br> 10km run
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_ironman.png');"></div>
+          <div class="flip-card-back">
+            <p> <strong>Full Ironman:</strong>
+              Extreme endurance, mental fortitude. The ultimate test of endurance, pushing athletes to their physical
+              and mental limits for an entire day
+              <br></br>
+              Distance: <br> 3.8km swim <br> 180km bike <br> 42.2km run
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <footer>
-    <div class="footer-section">
-      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo" style="height: 40px;">
-      <p>Inspiring strength, endurance, and unity through triathlons.</p>
+  <section class="image-separator">
+    <img src="../images/background_image_hex.png" alt="Separator Image">
+  </section>
+
+
+  <section class="training-topics">
+    <div class="card-grid">
+
+      <div class="topic-card">
+        <img src="../images/healthy_prepare1.png" alt="Prepare">
+        <div class="card-content">
+          <h3>Prepare</h3>
+          <p>Your training is the heart of your IRON'EFREI journey. Start smart and go strong with a purpose-driven
+            plan.</p>
+          <a href="prepare.html" class="learn-btn">Learn More <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <img src="../images/healthy_meal.png" alt="Fuel">
+        <div class="card-content">
+          <h3>Fuel</h3>
+          <p>Discover daily nutrition tips and fueling strategies to energize your workouts and speed up your recovery.
+          </p>
+          <a href="fuel.html" class="learn-btn">Learn More <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <img src="../images/healthy_recovery1.png" alt="Recover">
+        <div class="card-content">
+          <h3>Recover</h3>
+          <p>Maximize performance through proper recovery — mobility, rest, and restoration techniques that work.</p>
+          <a href="recover.html" class="learn-btn">Learn More <span>→</span></a>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-section">
-      <a href="#">About Us</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+  </section>
+
+  <section class="highlights auto-scroll">
+    <div class="highlight-track">
+      <div class="highlight">
+        <h3><a href="events.html">Upcoming Events</a></h3>
+        <p>Check out our latest triathlon events happening across the region. Stay updated and find the next race near
+          you!</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="prepare.html">Preparation</a></h3>
+        <p>Learn how to structure your training weeks, balance disciplines, and prepare mentally for the challenge
+          ahead.</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="fuel.html">Fuel</a></h3>
+        <p>Get smart about triathlon nutrition. Discover what to eat before, during, and after your workouts and races.
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="recover.html">Recovery</a></h3>
+        <p>Maximize gains and avoid burnout with strategic rest days, stretching techniques, and recovery nutrition.</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="emissions.html">Join the Community</a></h3>
+        <p>Connect with other triathletes, share your progress, and be inspired. We grow stronger together!</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="rankings.html">Rankings</a></h3>
+        <p>See who’s crushing the leaderboard. Track top-performing triathletes and get motivated to rise up the ranks.
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="emissions.html">Emissions Awareness</a></h3>
+        <p>Learn how our events are reducing their environmental footprint and how you can help promote sustainable
+          sports.</p>
+      </div>
+
+
+      <!-- DUPLICATE cards to create looping effect -->
+      <div class="highlight">
+        <h3><a href="events.html">Upcoming Events</a></h3>
+        <p>Check out our latest triathlon events happening across the region. Stay updated and find the next race near
+          you!</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="prepare.html">Preparation</a></h3>
+        <p>Learn how to structure your training weeks, balance disciplines, and prepare mentally for the challenge
+          ahead.</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="fuel.html">Fuel</a></h3>
+        <p>Get smart about triathlon nutrition. Discover what to eat before, during, and after your workouts and races.
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="recover.html">Recovery</a></h3>
+        <p>Maximize gains and avoid burnout with strategic rest days, stretching techniques, and recovery nutrition.</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="emissions.html">Join the Community</a></h3>
+        <p>Connect with other triathletes, share your progress, and be inspired. We grow stronger together!</p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="rankings.html">Rankings</a></h3>
+        <p>See who’s crushing the leaderboard. Track top-performing triathletes and get motivated to rise up the ranks.
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3><a href="emissions.html">Emissions Awareness</a></h3>
+        <p>Learn how our events are reducing their environmental footprint and how you can help promote sustainable
+          sports.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+        <p>Inspiring strength, endurance, and unity through triathlons.</p>
+      </div>
+
+      <div class="footer-links horizontal">
+        <div class="footer-group">
+          <h4><a href="about.html">About</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="events.html">Events</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="#">Training</a></h4>
+          <ul>
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recover.html">Recover</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4><a href="emissions.html">Sustainability</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
     </div>
   </footer>
 
-  <img src="../img/coureur.png" alt="scrollsport" class="scrollsport"/>
-  
+
+
+
 </body>
 
 </html>

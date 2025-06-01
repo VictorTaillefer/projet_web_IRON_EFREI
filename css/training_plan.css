@@ -1,0 +1,112 @@
+.training-table {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.training-table h3 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.training-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border: 2px solid #000;
+}
+
+.training-table th,
+.training-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.training-table thead {
+  background: var(--primary-color);
+  color: white;
+}
+
+
+.training-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.training-table td:first-child {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.section-divider {
+  border: none;
+  border-top: 3px solid #000;
+  margin: 4rem auto 2rem;
+  width: 80%;
+}
+
+.detailed-plan {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.detailed-plan h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.training-details {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.training-details th {
+  background: #dcdcdc;
+  color: #000;
+  padding: 1rem;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.training-details td {
+  padding: 1.2rem;
+  border: 1px solid black;
+  background: #fff;
+  color: #000;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.training-details td strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.custom-plan {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.custom-plan select {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  border: 1px solid #333;
+}
+
+

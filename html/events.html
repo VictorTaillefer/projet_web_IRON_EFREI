@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRON'EFREI - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/events.css">
+
+
+    <script src="../js/events.js" defer></script>
+    <script src="../js/script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header with navigation -->
+    <header>
+
+        <div class="logo">
+            <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="nav-links">
+            <ul id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+
+                <li class="dropdown">
+                    <span class="dropdown-trigger">Training ▾</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="prepare.html">Prepare</a></li>
+                        <li><a href="fuel.html">Fuel</a></li>
+                        <li><a href="recovery.html">Recover</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="emissions.html">Community</a></li>
+                <li><a href="emissions.html">Emissions</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MAIN BODY -->
+    <section class="intro">
+        <h2>Upcoming Triathlons</h2>
+        <p>Every day, athletes around the world are pushing their limits and taking on new challenges. If you're ready
+            to test your endurance and spirit, here are a few upcoming triathlons you can sign up for today.</p>
+    </section>
+
+    <section class="event">
+        <h3>IronSummit 2025 – Mont Blanc</h3>
+        <p>Date: August 10, 2025 | Location: Chamonix, France</p>
+        <div id="countdown1" class="countdown"></div>
+    </section>
+
+    <!-- Full Width Map Below -->
+    <div class="full-map">
+        <iframe src="https://maps.google.com/maps?q=45.9237,6.8694&z=13&output=embed" width="100%" height="600"
+            style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+    <section class="triathlon-cards">
+
+        <!-- IRONMAN Brazil -->
+        <div class="tri-card">
+            <img src="../images/events/brazil.png" alt="Ironman Brazil" class="tri-img">
+            <div class="tri-info">
+                <span class="date">June 1, 2025</span>
+                <h4>IRONMAN Brazil</h4>
+                <p>SC, Brazil 🇧🇷</p>
+                <div class="disciplines">
+                    <div><img src="../images/icons/ocean.png" alt="Swim"> Ocean</div>
+                    <div><img src="../images/icons/rolling.png" alt="Bike"> Rolling</div>
+                    <div><img src="../images/icons/flat.png" alt="Run"> Flat</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- IRONMAN France -->
+        <div class="tri-card">
+            <img src="../images/events/france.png" alt="Ironman France" class="tri-img">
+            <div class="tri-info">
+                <span class="date">July 7, 2025</span>
+                <h4>IRONMAN France</h4>
+                <p>Nice, France 🇫🇷</p>
+                <div class="disciplines">
+                    <div><img src="../images/icons/ocean.png" alt="Swim"> Ocean</div>
+                    <div><img src="../images/icons/hilly.png" alt="Bike"> Hilly</div>
+                    <div><img src="../images/icons/flat.png" alt="Run"> flat</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IRONMAN Japan -->
+        <div class="tri-card">
+            <img src="../images/events/japan.png" alt="Ironman Japan" class="tri-img">
+            <div class="tri-info">
+                <span class="date">August 18, 2025</span>
+                <h4>IRONMAN Japan</h4>
+                <p>Hokkaido, Japan 🇯🇵</p>
+                <div class="disciplines">
+                    <div><img src="../images/icons/lake.png" alt="Swim"> Lake</div>
+                    <div><img src="../images/icons/rolling.png" alt="Bike"> Rolling</div>
+                    <div><img src="../images/icons/flat.png" alt="Run"> Flat</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IRONMAN South Africa -->
+        <div class="tri-card">
+            <img src="../images/events/south.png" alt="Ironman South Africa" class="tri-img">
+            <div class="tri-info">
+                <span class="date">September 14, 2025</span>
+                <h4>IRONMAN South Africa</h4>
+                <p>Port Elizabeth, South Africa 🇿🇦</p>
+                <div class="disciplines">
+                    <div><img src="../images/icons/ocean.png" alt="Swim"> Ocean</div>
+                    <div><img src="../images/icons/flat.png" alt="Bike"> Flat</div>
+                    <div><img src="../images/icons/flat.png" alt="Run"> Flat</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IRONMAN Australia -->
+        <div class="tri-card">
+            <img src="../images/events/australia.png" alt="Ironman Australia" class="tri-img">
+            <div class="tri-info">
+                <span class="date">October 6, 2025</span>
+                <h4>IRONMAN Australia</h4>
+                <p>Port Macquarie, Australia 🇦🇺</p>
+                <div class="disciplines">
+                    <div><img src="../images/icons/ocean.png" alt="Swim"> ocean</div>
+                    <div><img src="../images/icons/rolling.png" alt="Bike"> Rolling</div>
+                    <div><img src="../images/icons/flat.png" alt="Run"> Flat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+                <p>Inspiring strength, endurance, and unity through triathlons.</p>
+            </div>
+
+            <div class="footer-links horizontal">
+                <div class="footer-group">
+                    <h4><a href="about.html">About</a></h4>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="events.html">Events</a></h4>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="#">Training</a></h4>
+                    <ul>
+                        <li><a href="prepare.html">Prepare</a></li>
+                        <li><a href="fuel.html">Fuel</a></li>
+                        <li><a href="recover.html">Recover</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="emissions.html">Sustainability</a></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

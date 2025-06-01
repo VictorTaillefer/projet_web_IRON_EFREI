@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRON'EFREI - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/training_plan.css">
+
+    <script src="../js/script.js"></script>
+    <script src="../js/training.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <!-- Header with navigation -->
+    <header>
+
+        <div class="logo">
+            <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="nav-links">
+            <ul id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+
+                <li class="dropdown">
+                    <span class="dropdown-trigger">Training ▾</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="prepare.html">Prepare</a></li>
+                        <li><a href="fuel.html">Fuel</a></li>
+                        <li><a href="recovery.html">Recover</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="emissions.html">Community</a></li>
+                <li><a href="emissions.html">Emissions</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MAIN BODY -->
+    <section class="intro">
+        <h2>Triathlon Training</h2>
+        <p>Training for a triathlon is a test of consistency, endurance, and discipline. It involves carefully balancing
+            swim, bike, and run workouts while allowing time for recovery and proper fueling. Whether you're training
+            for a sprint or an Ironman, having a structured plan is key to achieving your goals without burnout or
+            injury.</p>
+    </section>
+
+    <section class="training-table">
+        <h3>Recommended Training Time & Finish Goals</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Distance</th>
+                    <th>Recommended Training Time (weeks)</th>
+                    <th>Average Finishing Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sprint</td>
+                    <td>6–8 weeks</td>
+                    <td>1h 15m – 1h 45m</td>
+                </tr>
+                <tr>
+                    <td>Olympic</td>
+                    <td>8–12 weeks</td>
+                    <td>2h 30m – 3h 30m</td>
+                </tr>
+                <tr>
+                    <td>70.3 (Half Ironman)</td>
+                    <td>12–20 weeks</td>
+                    <td>5h 30m – 7h 30m</td>
+                </tr>
+                <tr>
+                    <td>140.6 (Full Ironman)</td>
+                    <td>20–30 weeks</td>
+                    <td>11h – 15h</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="custom-plan">
+        <h3>Create Your Weekly Ironman Training Plan</h3>
+        <label for="trainingLevel">Select your training level:</label>
+        <select id="trainingLevel" onchange="renderDetailedPlan(this.value)">
+            <option value="beginner">Beginner (8–10 hrs/week)</option>
+            <option value="intermediate">Intermediate (12–15 hrs/week)</option>
+            <option value="advanced">Advanced (16–20+ hrs/week)</option>
+        </select>
+    </section>
+
+    <section class="detailed-plan">
+        <h3>Your Ironman Weekly Training Plan</h3>
+        <table class="training-details">
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="detailedRow">
+                    <!-- Populated by JS -->
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+                <p>Inspiring strength, endurance, and unity through triathlons.</p>
+            </div>
+
+            <div class="footer-links horizontal">
+                <div class="footer-group">
+                    <h4><a href="about.html">About</a></h4>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="events.html">Events</a></h4>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="#">Training</a></h4>
+                    <ul>
+                        <li><a href="prepare.html">Prepare</a></li>
+                        <li><a href="fuel.html">Fuel</a></li>
+                        <li><a href="recover.html">Recover</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="emissions.html">Sustainability</a></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

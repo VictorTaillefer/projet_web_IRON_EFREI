@@ -1,0 +1,42 @@
+.about-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}
+
+.about-page .intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.about-page .team {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.member, .shared {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.member h2, .shared h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.member p, .shared p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}

@@ -1,0 +1,102 @@
+.emissions-page {
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: url('../images/emissions.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  color: white;
+  border-radius: 8px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.impact-overview .impact-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.impact-card {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.slider-container {
+  background: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.solution-list {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.cta {
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-btn {
+  background: white;
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ddd;
+}
+
+.impact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}

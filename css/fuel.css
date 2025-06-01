@@ -1,0 +1,76 @@
+.hero {
+  position: relative;
+  background-image: url('../images/nutrition/drinking_plan.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+main.nutrition-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}
+
+.nutrition-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.nutrition-page h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  color: var(--primary-color);
+}
+
+.nutrition-page p, .nutrition-page li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.nutrition-page ul {
+  margin-left: 1.5rem;
+}
+
+.nutrition-page table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.nutrition-page th, .nutrition-page td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: left;
+}
+
+.nutrition-page th {
+  background-color: #f7f7f7;
+  color: #000;
+}

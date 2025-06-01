@@ -1,0 +1,96 @@
+.event {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.countdown {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #b30000;
+  background: #ffe5e5;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 0 12px rgba(179, 0, 0, 0.4);
+  margin-top: 1rem;
+}
+
+.triathlon-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 900px; /* Narrower container */
+  margin: 0 auto;
+}
+
+.tri-card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 280px; /* Taller cards */
+}
+
+.tri-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.tri-info .date {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.tri-info h4 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+}
+
+.tri-info p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.disciplines {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.disciplines div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.disciplines img {
+  width: 26px;
+  height: 26px;
+}
+
+/* Bigger right-side image */
+.tri-img {
+  width: 280px;     /* Wider image */
+  height: 100%;
+  object-fit: cover;
+}
+

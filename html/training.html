@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRON'EFREI - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <script src="../js/script.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Header with navigation -->
+  <header>
+
+    <div class="logo">
+      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      <ul id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+
+        <li class="dropdown">
+          <span class="dropdown-trigger">Training ▾</span>
+          <ul class="dropdown-menu">
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recover.html">Recover</a></li>
+          </ul>
+        </li>
+
+        <li><a href="emissions.html">Community</a></li>
+        <li><a href="emissions.html">Emissions</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+
+  <!-- Training Introduction -->
+  <section class="training-intro">
+    <h1>Train Smart, Race Strong</h1>
+    <p>Training for a triathlon is more than just logging hours in the pool, on the bike, or on your feet. It's a
+      structured commitment that balances intensity with rest, pushing limits while listening to your body.</p>
+
+    <p><strong>Time Commitment:</strong> Depending on your chosen distance, expect to dedicate 6 to 15+ hours per week.
+      Sprint races are more beginner-friendly, while Ironman distances require near-daily sessions.</p>
+
+    <p><strong>Nutrition:</strong> Fuel is crucial. You’ll need balanced meals rich in complex carbs, lean protein, and
+      hydration strategies that support long sessions and recovery. Pre- and post-workout nutrition can make or break
+      progress.</p>
+
+    <p><strong>Recovery:</strong> Don’t skip it. Sleep, stretching, and light mobility work are essential to prevent
+      injury and support long-term performance gains.</p>
+
+    <p><strong>Mindset:</strong> Triathlon is as much mental as physical. Goal setting, tracking progress, and pushing
+      through fatigue are skills developed over time.</p>
+
+    <p><strong>Gear Essentials:</strong> A quality bike, proper footwear, a comfortable wetsuit, and basic tracking
+      tools can streamline your training process and enhance safety.</p>
+
+    <ul>
+      <li>Train with intention, not just volume.</li>
+      <li>Log your sessions and listen to your body.</li>
+      <li>Consistency > perfection — show up regularly.</li>
+      <li>Adapt your schedule around your life, not vice versa.</li>
+    </ul>
+  </section>
+
+  <!-- Interactive Training Plan -->
+  <section class="training-plan">
+    <h2>Generate Your Weekly Plan</h2>
+    <label for="distance">Choose your race distance:</label>
+    <select id="distance">
+      <option value="">--Select--</option>
+      <option value="sprint">Sprint</option>
+      <option value="olympic">Olympic</option>
+      <option value="half">Half Ironman</option>
+      <option value="ironman">Ironman</option>
+    </select>
+
+    <label for="hours">How many hours per week can you train?</label>
+    <input type="number" id="hours" min="0" max="40" placeholder="e.g. 8">
+
+    <button id="generate">Generate Plan</button>
+
+    <div id="plan-output"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+        <p>Inspiring strength, endurance, and unity through triathlons.</p>
+      </div>
+
+      <div class="footer-links horizontal">
+        <div class="footer-group">
+          <h4><a href="about.html">About</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="events.html">Events</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="#">Training</a></h4>
+          <ul>
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recover.html">Recover</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4><a href="emissions.html">Sustainability</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRON'EFREI - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/emissions.css">
+
+  <script src="../js/script.js"></script>
+  <script src="../js/emissions.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Header with navigation -->
+  <header>
+
+    <div class="logo">
+      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      <ul id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+
+        <li class="dropdown">
+          <span class="dropdown-trigger">Training ▾</span>
+          <ul class="dropdown-menu">
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recovery.html">Recover</a></li>
+          </ul>
+        </li>
+
+        <li><a href="emissions.html">Community</a></li>
+        <li><a href="emissions.html">Emissions</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- MAIN BODY-->
+  <main class="emissions-page">
+
+    <section class="hero">
+      <h1>Triathlon & the Planet</h1>
+      <p>Endurance sports thrive in nature. Let's protect the playground we race in.</p>
+    </section>
+
+    <!-- Impact Overview -->
+    <section class="impact-overview">
+      <h2>What's the Impact?</h2>
+      <div class="impact-cards">
+        <div class="impact-card">
+          <h3>Travel Emissions</h3>
+          <p>Over 60% of an event's carbon footprint comes from athlete and spectator travel.</p>
+        </div>
+        <div class="impact-card">
+          <h3>Waste Generation</h3>
+          <p>Plastic cups, wrappers, signs — races generate tons of landfill waste annually.</p>
+        </div>
+        <div class="impact-card">
+          <h3>Resource Use</h3>
+          <p>From bottled water to single-use bibs, triathlons often use more than they need.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slider/Quiz Element -->
+    <section class="footprint-calc">
+      <h2>What's *Your* Race Footprint?</h2>
+      <p>Slide to estimate how far you're traveling and see your carbon cost:</p>
+      <div class="slider-container">
+        <label for="distanceRange">Distance to event (km): <span id="rangeValue">100</span> km</label>
+        <input type="range" min="10" max="10000" value="100" id="distanceRange">
+        <p>Estimated emissions: <strong><span id="carbonOutput">~20 kg CO₂</span></strong></p>
+      </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="solutions">
+      <h2>Greener Racing Starts With You</h2>
+      <ul class="solution-list">
+        <li><strong>Carpool or train it:</strong> Travel smarter and cut emissions dramatically.</li>
+        <li><strong>Bring a reusable bottle:</strong> Skip the disposable cups.</li>
+        <li><strong>Support green events:</strong> Look for certified sustainable races.</li>
+        <li><strong>Offset your carbon:</strong> Contribute to reforestation or clean energy projects.</li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <h2>Join the Movement</h2>
+      <p>We're building a community of conscious athletes. Share your own race habits and inspire others to go greener.
+      </p>
+      <a href="#" id="pledgeBtn" class="cta-btn">Submit Your Impact Pledge</a>
+      <p id="fake-message" style="display:none; margin-top: 1rem; font-style: italic;"></p>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+        <p>Inspiring strength, endurance, and unity through triathlons.</p>
+      </div>
+
+      <div class="footer-links horizontal">
+        <div class="footer-group">
+          <h4><a href="about.html">About</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="events.html">Events</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="#">Training</a></h4>
+          <ul>
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recover.html">Recover</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4><a href="emissions.html">Sustainability</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
