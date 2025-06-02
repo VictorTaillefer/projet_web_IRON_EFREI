@@ -2,32 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Document Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
   <title>IRON'EFREI - Home</title>
+
+  <!-- We decided to use Monserrat as both our headings and body font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/about.css">
+
+  <!-- JavaScript file for interactive features -->
+  <script src="../js/script.js"></script>
+
+  <!-- Viewport meta tag (duplicate, but harmless) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
 
-  <!-- Header with navigation -->
+  <!-- HEADER SECTION -->
   <header>
 
+    <!-- Hamburger Menu Button (for mobile navigation) -->
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <!-- Logo Section -->
     <div class="logo">
-      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+      <a href="home.html">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+      </a>
     </div>
 
-    <!-- Navigation links -->
+    <!-- Navigation Links -->
     <nav class="nav-links">
       <ul id="navLinks">
+
+        <!-- Main Navigation Items -->
         <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
 
-        <li class="dropdown">
+        <!-- Dropdown Menu for Training Subpages (visible only on desktop) -->
+        <li class="dropdown desktop-only">
           <span class="dropdown-trigger">Training ▾</span>
           <ul class="dropdown-menu">
             <li><a href="prepare.html">Prepare</a></li>
@@ -36,14 +58,20 @@
           </ul>
         </li>
 
+        <!-- Individual Training Links for Mobile View (no dropdown) -->
+        <li class="mobile-only"><a href="prepare.html">Prepare</a></li>
+        <li class="mobile-only"><a href="fuel.html">Fuel</a></li>
+        <li class="mobile-only"><a href="recovery.html">Recover</a></li>
+
         <li><a href="community.html">Community</a></li>
         <li><a href="emissions.html">Emissions</a></li>
+
       </ul>
     </nav>
 
   </header>
 
-  <!-- MAIN BODY-->
+  <!-- MAIN BODY CONTENT -->
 
   <main class="about-page">
     <section class="intro">
@@ -54,32 +82,45 @@
     </section>
 
     <section class="team">
+      <h2>Meet the team</h2>
       <article class="member">
         <h2>William ROBERT</h2>
         <p><strong>Role :</strong> HTML structure, design direction, and front-end feature implementation.</p>
-        <p> I Handled the architecture and layout of every page, ensuring the user experience is intuitive and
-          visually engaging. My focus was on translating creative vision into responsive, functional web components.
+        <p> I worked on the structure and styling of multiple pages, focusing on clean HTML and responsive CSS.
+          I helped plan the site layout and navigation flow to ensure it stayed intuitive across devices.
+          I also collaborated closely on JavaScript features like training plans and interactivity,
+          and contributed to refining the overall visual direction.
+          Each page was a joint effort in terms of review and iteration, even when the implementation was split.
         </p>
       </article>
 
       <article class="member">
         <h2>Victor TAILLEFER</h2>
         <p><strong>Role :</strong> Content researcher, CSS styling, and technical enhancements.</p>
-        <p>On my side I led the content generation effort—researching triathlon-specific information to ensure
-          everything was
-          accurate and useful. I also fine-tuned the CSS for each page and contributed greatly to the visual
-          consistency of the site.</p>
+        <p>I handled the layout and design of several pages, working on both the HTML markup and the styling with CSS.
+          I took part in shaping the overall look of the site and ensured consistency across different sections.
+          JavaScript functionality was developed together, with an eye toward performance and user experience.
+          While responsibilities were often divided by page, everything was built and refined through shared feedback
+          and polish..</p>
       </article>
 
       <article class="shared">
         <h2>Collaborative Work</h2>
-        <p>Together, we brainstormed and developed interactive features such as JSON-based training plans, countdown
+        <p>Together, we brainstormed and developed interactive features such as JS-based training plans, countdown
           timers, and other dynamic elements that made this project more than just a static site.</p>
+      </article>
+
+      <article class="github">
+        <h2>GitHub</h2>
+        <p>You can check out our project source code here:</p>
+        <a class="github-link" href="https://github.com/VictorTaillefer/projet_web_IRON_EFREI" target="_blank"
+          rel="noopener">View on
+          GitHub</a>
       </article>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER SECTION -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-brand">
@@ -87,6 +128,7 @@
         <p>Inspiring strength, endurance, and unity through triathlons.</p>
       </div>
 
+      <!-- Footer Navigation Links -->
       <div class="footer-links horizontal">
         <div class="footer-group">
           <h4><a href="about.html">About</a></h4>
@@ -95,15 +137,18 @@
           <h4><a href="events.html">Events</a></h4>
         </div>
         <div class="footer-group">
-          <h4><a href="#">Training</a></h4>
+          <h4><a href="prepare.html">Training</a></h4>
           <ul>
             <li><a href="prepare.html">Prepare</a></li>
             <li><a href="fuel.html">Fuel</a></li>
-            <li><a href="recover.html">Recover</a></li>
+            <li><a href="recovery.html">Recover</a></li>
           </ul>
         </div>
         <div class="footer-group">
           <h4><a href="emissions.html">Sustainability</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="community.html">Community</a></h4>
         </div>
       </div>
     </div>
@@ -112,7 +157,6 @@
       <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
     </div>
   </footer>
-
 
 </body>
 

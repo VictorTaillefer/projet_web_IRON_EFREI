@@ -1,77 +1,116 @@
-.hero {
-  position: relative;
-  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 5rem 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay */
-  z-index: 0;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 1;
-}
-
-
-main.recovery-section {
-  max-width: 1100px;
-  margin: 0 auto;
+/* Main wrapper */
+.recovery-section {
   padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--text-color);
+  background-color: #ffffff;
+  line-height: 1.7;
   font-family: 'Montserrat', sans-serif;
-  color: #222;
 }
 
-.recovery-section h2 {
-  font-size: 2rem;
+/* Hero Section */
+.recovery-section .hero {
+  background: linear-gradient(to right, var(--primary-color), #01406b);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.recovery-section .hero h1 {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
 }
 
-.recovery-section h3 {
-  font-size: 1.4rem;
-  margin-top: 2rem;
+.recovery-section .hero p {
+  font-size: 1.2rem;
+}
+
+/* Generic Section Styling */
+.recovery-section section:not(.hero) {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Section Headings */
+.recovery-section h2 {
+  font-size: 1.8rem;
   color: var(--primary-color);
+  margin-bottom: 1.2rem;
+  border-left: 5px solid var(--accent-color);
+  padding-left: 0.75rem;
 }
 
-.recovery-section p, .recovery-section li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.recovery-section ul {
-  margin-left: 1.5rem;
-}
-
-.recovery-section table {
-  width: 100%;
-  margin: 2rem 0;
-  border-collapse: collapse;
+/* Paragraphs */
+.recovery-section p {
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 
-.recovery-section th, .recovery-section td {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  text-align: left;
+/* Lists */
+.recovery-section ul,
+.recovery-section ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
 }
 
-.recovery-section th {
-  background-color: #f7f7f7;
-  color: #000;
+.recovery-section li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 0.8rem;
+  line-height: 1.5;
+}
+
+.recovery-section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.recovery-section ol {
+  list-style: decimal inside;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .recovery-section {
+    padding: 1.5rem;
+  }
+
+  .recovery-section .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .recovery-section .hero h1 {
+    font-size: 2rem;
+  }
+
+  .recovery-section .hero p {
+    font-size: 1rem;
+  }
+
+  .recovery-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .recovery-section section:not(.hero) {
+    padding: 1.5rem;
+  }
 }

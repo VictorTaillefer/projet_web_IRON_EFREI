@@ -1,191 +1,226 @@
-<!DOCTYPE html>Add commentMore actions
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRON'EFREI - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/community.css">
-    <script src="../js/script.js"></script>
+  <!-- Document Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>IRON'EFREI - Home</title>
+
+  <!-- We decided to use Monserrat as both our headings and body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/community.css">
+
+
+  <!-- JavaScript file for interactive features -->
+  <script src="../js/script.js"></script>
+
+  <!-- Viewport meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 </head>
 
 <body>
 
-    <!-- Header with navigation -->
-    <header>
+  <!-- Header Section -->
+  <header>
 
-        <div class="logo">
-            <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+    <!-- Hamburger Menu Button (for mobile navigation) -->
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <!-- Logo Section -->
+    <div class="logo">
+      <a href="home.html">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <ul id="navLinks">
+
+        <!-- Main Navigation Items -->
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+
+        <!-- Dropdown Menu for Training Subpages (visible only on desktop) -->
+        <li class="dropdown desktop-only">
+          <span class="dropdown-trigger">Training ▾</span>
+          <ul class="dropdown-menu">
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recovery.html">Recover</a></li>
+          </ul>
+        </li>
+
+        <!-- Individual Training Links for Mobile View (no dropdown) -->
+        <li class="mobile-only"><a href="prepare.html">Prepare</a></li>
+        <li class="mobile-only"><a href="fuel.html">Fuel</a></li>
+        <li class="mobile-only"><a href="recovery.html">Recover</a></li>
+
+        <li><a href="community.html">Community</a></li>
+        <li><a href="emissions.html">Emissions</a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- MAIN BODY CONTENT -->
+
+  <main class="community-page">
+    <!-- Intro section -->
+    <section class="intro">
+      <h1>Our Triathlon Community</h1>
+      <p>Welcome to the beating heart of IRON'EFREI ! <br> A place to celebrate achievements, share experiences,
+        and
+        grow together.</p>
+    </section>
+
+    <!-- Recent Races -->
+    <section class="recent-races">
+      <h2>Recent Races</h2>
+      <div class="race-list">
+        <div class="race-card">
+          <h3>Championnats de France unniversitaire du Duathlon</h3>
+          <p><strong>Date:</strong> March 9, 2025</p>
+          <p>Last Sunday, March 9, our seven athletes and students proudly represented the EFREI team at
+            the French University Duathlon Championships.<br> The level was very high,
+            but we were able to deliver at the start of the season.</p>
+          <img src="../images/bonhomme.png" alt="Triathlete after race race" class="section-image">
         </div>
-
-        <!-- Navigation links -->
-        <nav class="nav-links">
-            <ul id="navLinks">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-
-                <li class="dropdown">
-                    <span class="dropdown-trigger">Training ▾</span>
-                    <ul class="dropdown-menu">
-                        <li><a href="prepare.html">Prepare</a></li>
-                        <li><a href="fuel.html">Fuel</a></li>
-                        <li><a href="recovery.html">Recover</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="emissions.html">Community</a></li>
-                <li><a href="emissions.html">Emissions</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <!-- MAIN BODY-->
-    <main class="community-page">
-        <!-- Intro section -->
-        <section class="intro">
-            <h1>Our Triathlon Community</h1>
-            <p>Welcome to the beating heart of IRON'EFREI ! <br> A place to celebrate achievements, share experiences,
-                and
-                grow together.</p>
-        </section>
-
-        <!-- Recent Races -->
-        <section class="recent-races">
-            <h2>Recent Races</h2>
-            <div class="race-list">
-                <div class="race-card">
-                    <h3>Championnats de France unniversitaire du Duathlon</h3>
-                    <p><strong>Date:</strong> March 9, 2025</p>
-                    <p>Last Sunday, March 9, our seven athletes and students proudly represented the EFREI team at
-                        the French University Duathlon Championships.<br> The level was very high,
-                        but we were able to deliver at the start of the season.</p>
-                    <img src="../images/bonhomme.png" alt="Triathlete after race race" class="section-image">
-                </div>
-                <div class="race-card">
-                    <h3>Lyon Sprint Challenge</h3>
-                    <p><strong>Date:</strong> April 20, 2025</p>
-                    <p>A fast-paced sprint event where new talents emerged and veteran triathletes proved their
-                        endurance once more.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Results -->
-        <section class="race-results">
-            <h2>Top Results</h2>
-            <div class="results-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Athlete</th>
-                            <th>Race</th>
-                            <th>Time</th>
-                            <th>Time Ranking </th>
-                            <th>Ranking scratch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Enzo GONZALEZ</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h04min38s</td>
-                            <td>17th</td>
-                            <td>42nd</td>
-                        </tr>
-                        <tr>
-                            <td>Thibault CHESNEL</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h16min07s</td>
-                            <td>33rd</td>
-                            <td>209td</td>
-                        </tr>
-                        <tr>
-                            <td>Marc-Antoine LASSOUT</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h18min18s</td>
-                            <td>36th</td>
-                            <td>240td</td>
-                        </tr>
-                        <tr>
-                            <td>Axel STOLTZ</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h19min05s</td>
-                            <td>37th</td>
-                            <td>247th</td>
-                        </tr>
-                        <tr>
-                            <td>David VERRIER</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h25min20s</td>
-                            <td>42nd</td>
-                            <td>312nd</td>
-                        </tr>
-                        <tr>
-                            <td>Mattéo RAFFET</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h38min17s</td>
-                            <td>48th</td>
-                            <td>373rd</td>
-                        </tr>
-                        <tr>
-                            <td>Marko OBRAIDOVIC</td>
-                            <td>University Duathlon Championships </td>
-                            <td>1h40min57s</td>
-                            <td>49th</td>
-                            <td>377th</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Join the Community -->
-        <section class="join-community">
-            <h2>Join Our Team</h2>
-            <p>Want to be part of the action? Whether you're a beginner or a seasoned athlete, IRON'EFREI welcomes you!
-            </p>
-            <a href="about.html" class="learn-btn">Get in Touch</a>
-        </section>
-    </main>
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
-                <p>Inspiring strength, endurance, and unity through triathlons.</p>
-            </div>
-
-            <div class="footer-links horizontal">
-                <div class="footer-group">
-                    <h4><a href="about.html">About</a></h4>
-                </div>
-                <div class="footer-group">
-                    <h4><a href="events.html">Events</a></h4>
-                </div>
-                <div class="footer-group">
-                    <h4><a href="#">Training</a></h4>
-                    <ul>
-                        <li><a href="prepare.html">Prepare</a></li>
-                        <li><a href="fuel.html">Fuel</a></li>
-                        <li><a href="recover.html">Recover</a></li>
-                    </ul>
-                </div>
-                <div class="footer-group">
-                    <h4><a href="emissions.html">Sustainability</a></h4>
-                </div>
-            </div>
+        <div class="race-card">
+          <h3>Lyon Sprint Challenge</h3>
+          <p><strong>Date:</strong> April 20, 2025</p>
+          <p>A fast-paced sprint event where new talents emerged and veteran triathletes proved their
+            endurance once more.</p>
+          <img src="../images/70.3_champ.png" alt="Triathlete after race race" class="section-image">
         </div>
+      </div>
+    </section>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
+    <!-- Results -->
+    <section class="race-results">
+      <h2>Top Results</h2>
+      <div class="results-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Athlete</th>
+              <th>Race</th>
+              <th>Time</th>
+              <th>Time Ranking </th>
+              <th>Ranking scratch</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Enzo GONZALEZ</td>
+              <td>University Duathlon Championships </td>
+              <td>1h04min38s</td>
+              <td>17th</td>
+              <td>42nd</td>
+            </tr>
+            <tr>
+              <td>Thibault CHESNEL</td>
+              <td>University Duathlon Championships </td>
+              <td>1h16min07s</td>
+              <td>33rd</td>
+              <td>209td</td>
+            </tr>
+            <tr>
+              <td>Marc-Antoine LASSOUT</td>
+              <td>University Duathlon Championships </td>
+              <td>1h18min18s</td>
+              <td>36th</td>
+              <td>240td</td>
+            </tr>
+            <tr>
+              <td>Axel STOLTZ</td>
+              <td>University Duathlon Championships </td>
+              <td>1h19min05s</td>
+              <td>37th</td>
+              <td>247th</td>
+            </tr>
+            <tr>
+              <td>David VERRIER</td>
+              <td>University Duathlon Championships </td>
+              <td>1h25min20s</td>
+              <td>42nd</td>
+              <td>312nd</td>
+            </tr>
+            <tr>
+              <td>Mattéo RAFFET</td>
+              <td>University Duathlon Championships </td>
+              <td>1h38min17s</td>
+              <td>48th</td>
+              <td>373rd</td>
+            </tr>
+            <tr>
+              <td>Marko OBRAIDOVIC</td>
+              <td>University Duathlon Championships </td>
+              <td>1h40min57s</td>
+              <td>49th</td>
+              <td>377th</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Join the Community -->
+    <section class="join-community">
+      <h2>Join Our Team</h2>
+      <p>Want to be part of the action? Whether you're a beginner or a seasoned athlete, IRON'EFREI welcomes you!
+      </p>
+      <a href="about.html" class="learn-btn">Get in Touch</a>
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+        <p>Inspiring strength, endurance, and unity through triathlons.</p>
+      </div>
+
+      <!-- Footer Navigation Links -->
+      <div class="footer-links horizontal">
+        <div class="footer-group">
+          <h4><a href="about.html">About</a></h4>
         </div>
-    </footer>
+        <div class="footer-group">
+          <h4><a href="events.html">Events</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="prepare.html">Training</a></h4>
+          <ul>
+            <li><a href="prepare.html">Prepare</a></li>
+            <li><a href="fuel.html">Fuel</a></li>
+            <li><a href="recovery.html">Recover</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4><a href="emissions.html">Sustainability</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="community.html">Community</a></h4>
+        </div>
+      </div>
+    </div>
 
+    <div class="footer-bottom">
+      <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 

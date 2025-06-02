@@ -6,6 +6,9 @@
   color: #222;
 }
 
+/* =====================================
+   Introduction
+===================================== */
 .about-page .intro {
   text-align: center;
   margin-bottom: 3rem;
@@ -17,26 +20,85 @@
   color: var(--primary-color);
 }
 
+/* =====================================
+   Team Section (member/shared/github)
+===================================== */
 .about-page .team {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.member, .shared {
+.member,
+.shared,
+.github {
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
 }
 
-.member h2, .shared h2 {
+.member h2,
+.shared h2,
+.github h2 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-.member p, .shared p {
+.member p,
+.shared p,
+.github p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0.5rem 0;
+}
+
+/* GitHub Link Button */
+.github-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.github-link:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* =====================================
+   Responsive Styles
+===================================== */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 2rem 1rem;
+  }
+
+  .about-page h1 {
+    font-size: 2rem;
+  }
+
+  .member,
+  .shared,
+  .github {
+    padding: 1.5rem;
+  }
+
+  .member p,
+  .shared p,
+  .github p {
+    font-size: 1rem;
+  }
+
+  .github-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
 }

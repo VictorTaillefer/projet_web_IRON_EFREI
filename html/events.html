@@ -2,36 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Document Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
     <title>IRON'EFREI - Home</title>
+
+    <!-- We decided to use Monserrat as both our headings and body font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/events.css">
 
-
+    <!-- JavaScript file for interactive features -->
     <script src="../js/events.js" defer></script>
     <script src="../js/script.js"></script>
+
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
 
-    <!-- Header with navigation -->
+    <!-- HEADER SECTION -->
     <header>
 
+        <!-- Hamburger Menu Button (for mobile navigation) -->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <!-- Logo Section -->
         <div class="logo">
-            <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+            <a href="home.html">
+                <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+            </a>
         </div>
 
-        <!-- Navigation links -->
+        <!-- Navigation Links -->
         <nav class="nav-links">
             <ul id="navLinks">
+
+                <!-- Main Navigation Items -->
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="events.html">Events</a></li>
 
-                <li class="dropdown">
+                <!-- Dropdown Menu for Training Subpages (visible only on desktop) -->
+                <li class="dropdown desktop-only">
                     <span class="dropdown-trigger">Training ▾</span>
                     <ul class="dropdown-menu">
                         <li><a href="prepare.html">Prepare</a></li>
@@ -40,14 +59,21 @@
                     </ul>
                 </li>
 
+                <!-- Individual Training Links for Mobile View (no dropdown) -->
+                <li class="mobile-only"><a href="prepare.html">Prepare</a></li>
+                <li class="mobile-only"><a href="fuel.html">Fuel</a></li>
+                <li class="mobile-only"><a href="recovery.html">Recover</a></li>
+
                 <li><a href="community.html">Community</a></li>
                 <li><a href="emissions.html">Emissions</a></li>
+
             </ul>
         </nav>
 
     </header>
 
-    <!-- MAIN BODY -->
+    <!-- MAIN BODY CONTENT -->
+
     <section class="intro">
         <h2>Upcoming Triathlons</h2>
         <p>Every day, athletes around the world are pushing their limits and taking on new challenges. If you're ready
@@ -62,8 +88,8 @@
 
     <!-- Full Width Map Below -->
     <div class="full-map">
-        <iframe src="https://maps.google.com/maps?q=45.9237,6.8694&z=13&output=embed" width="100%" height="600"
-            style="border:0;" allowfullscreen="" loading="lazy">
+        <iframe src="https://maps.google.com/maps?q=45.9237,6.8694&z=13&output=embed" width="600" height="600"
+            style="width: 100%; border:0;" allowfullscreen="" loading="lazy">
         </iframe>
     </div>
 
@@ -147,8 +173,7 @@
         </div>
     </section>
 
-
-    <!-- FOOTER -->
+    <!-- FOOTER SECTION -->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -156,6 +181,7 @@
                 <p>Inspiring strength, endurance, and unity through triathlons.</p>
             </div>
 
+            <!-- Footer Navigation Links -->
             <div class="footer-links horizontal">
                 <div class="footer-group">
                     <h4><a href="about.html">About</a></h4>
@@ -164,15 +190,18 @@
                     <h4><a href="events.html">Events</a></h4>
                 </div>
                 <div class="footer-group">
-                    <h4><a href="#">Training</a></h4>
+                    <h4><a href="prepare.html">Training</a></h4>
                     <ul>
                         <li><a href="prepare.html">Prepare</a></li>
                         <li><a href="fuel.html">Fuel</a></li>
-                        <li><a href="recover.html">Recover</a></li>
+                        <li><a href="recovery.html">Recover</a></li>
                     </ul>
                 </div>
                 <div class="footer-group">
                     <h4><a href="emissions.html">Sustainability</a></h4>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="community.html">Community</a></h4>
                 </div>
             </div>
         </div>
@@ -181,7 +210,6 @@
             <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
         </div>
     </footer>
-
 
 </body>
 

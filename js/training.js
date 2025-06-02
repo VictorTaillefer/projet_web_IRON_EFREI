@@ -1,3 +1,4 @@
+// Define structured weekly training plans for each level
 const plans = {
   beginner: [
     "<strong>Swim</strong><br>45 min<br>Focus on technique, drills",
@@ -28,12 +29,21 @@ const plans = {
   ]
 };
 
+/**
+ * Renders the weekly training plan based on selected level
+ * @param {string} level - beginner | intermediate | advanced
+ */
 function renderDetailedPlan(level) {
-  const row = document.getElementById("detailedRow");
+  const body = document.getElementById("planBody");
+  body.innerHTML = ""; // Clear previous plan rows
+
+  // Create and populate a new row with the selected plan data
+  const row = document.createElement("tr");
   row.innerHTML = plans[level].map(item => `<td>${item}</td>`).join('');
+  body.appendChild(row);
 }
 
-// On page load, render beginner plan
+// Initialize page with beginner plan by default
 document.addEventListener("DOMContentLoaded", () => {
   renderDetailedPlan("beginner");
 });

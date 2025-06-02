@@ -1,49 +1,164 @@
-
-main.community-page {
-  max-width: 1100px;
-  margin: 0 auto;
+/* Wrapper */
+.community-page {
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  color: #222;
 }
 
-.community-page h2 {
+/* INTRO SECTION */
+.community-page .intro {
+  background: linear-gradient(to right, var(--primary-color), #01406b);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.community-page .intro h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.community-page .intro p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* RECENT RACES */
+.recent-races {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.race-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.race-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1 1 300px;
+  max-width: 450px;
+}
+
+.race-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.race-card img {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* RACE RESULTS TABLE */
+.race-results {
+  margin-bottom: 3rem;
+}
+
+.results-table {
+  overflow-x: auto;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.results-table th,
+.results-table td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+/* JOIN COMMUNITY */
+.join-community {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+}
+
+.join-community h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
 }
 
-.community-page h3 {
-  font-size: 1.4rem;
-  margin-top: 2rem;
+.join-community p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+.join-community .learn-btn {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.join-community .learn-btn:hover {
+  background: #fdd85a;
   color: var(--primary-color);
 }
 
-.community-page p, .community-page li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .community-page {
+    padding: 1rem;
+  }
 
-.community-page ul {
-  margin-left: 1.5rem;
-}
+  .race-list {
+    flex-direction: column;
+  }
 
-.community-page table {
-  width: 100%;
-  margin: 2rem 0;
-  border-collapse: collapse;
-  font-size: 1rem;
-}
+  .intro h1 {
+    font-size: 2rem;
+  }
 
-.community-page th, .community-page td {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  text-align: left;
-}
+  .intro p {
+    font-size: 1rem;
+  }
 
-.community-page th {
-  background-color: #f7f7f7;
-  color: #000;
+  .results-table th,
+  .results-table td {
+    padding: 0.75rem;
+  }
+
+  .join-community h2 {
+    font-size: 1.5rem;
+  }
+
+  .join-community p {
+    font-size: 1rem;
+  }
 }

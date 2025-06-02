@@ -24,7 +24,7 @@
   flex-direction: column;
   gap: 2rem;
   padding: 3rem 2rem;
-  max-width: 900px; /* Narrower container */
+  max-width: 900px; 
   margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  min-height: 280px; /* Taller cards */
+  min-height: 280px; 
 }
 
 .tri-info {
@@ -89,8 +89,72 @@
 
 /* Bigger right-side image */
 .tri-img {
-  width: 280px;     /* Wider image */
+  width: 280px; 
   height: 100%;
   object-fit: cover;
 }
 
+/* Full-width map container */
+.full-map iframe {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+
+  .event {
+    padding: 1.5rem 1rem;
+    max-width: 95%;
+  }
+
+  .countdown {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 0.8rem;
+  }
+
+  .triathlon-cards {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  /* Stack tri-cards vertically and make image full width above info */
+  .tri-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .tri-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .tri-info {
+    padding: 1rem 1.5rem 2rem;
+  }
+
+  .tri-info h4 {
+    font-size: 1.4rem;
+  }
+
+  .tri-info p {
+    font-size: 1rem;
+  }
+
+  .disciplines {
+    gap: 1rem;
+  }
+
+  .disciplines div {
+    font-size: 1rem;
+  }
+
+  /* Map height reduced on smaller screens */
+  .full-map iframe {
+    height: 300px;
+  }
+}

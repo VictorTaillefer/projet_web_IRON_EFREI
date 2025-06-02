@@ -2,32 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Document Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
   <title>IRON'EFREI - Home</title>
+
+  <!-- We decided to use Monserrat as both our headings and body font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="../css/global.css">
+
+  <!-- JavaScript file for interactive features -->
   <script src="../js/script.js"></script>
+
+  <!-- Viewport meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
 
-  <!-- Header with navigation -->
+  <!-- HEADER SECTION -->
   <header>
 
+    <!-- Hamburger Menu Button (for mobile navigation) -->
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <!-- Logo Section -->
     <div class="logo">
-      <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+      <a href="home.html">
+        <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+      </a>
     </div>
 
-    <!-- Navigation links -->
+    <!-- Navigation Links -->
     <nav class="nav-links">
       <ul id="navLinks">
+
+        <!-- Main Navigation Items -->
         <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
 
-        <li class="dropdown">
+        <!-- Dropdown Menu for Training Subpages (visible only on desktop) -->
+        <li class="dropdown desktop-only">
           <span class="dropdown-trigger">Training ▾</span>
           <ul class="dropdown-menu">
             <li><a href="prepare.html">Prepare</a></li>
@@ -36,14 +57,22 @@
           </ul>
         </li>
 
+        <!-- Individual Training Links for Mobile View (no dropdown) -->
+        <li class="mobile-only"><a href="prepare.html">Prepare</a></li>
+        <li class="mobile-only"><a href="fuel.html">Fuel</a></li>
+        <li class="mobile-only"><a href="recovery.html">Recover</a></li>
+
         <li><a href="community.html">Community</a></li>
         <li><a href="emissions.html">Emissions</a></li>
+
       </ul>
     </nav>
 
   </header>
 
-  <!-- MAIN BODY -->
+  <!-- MAIN BODY CONTENT -->
+
+  <!-- Hero Section -->
   <section class="hero">
     <h1>IRON'EFREI</h1>
   </section>
@@ -62,19 +91,21 @@
     <h2>Triathlon Distances</h2>
     <div class="distance-grid">
 
+      <!-- Sprint Distance Card -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_sprint.png');"></div>
           <div class="flip-card-back">
             <p><strong>Sprint Distance:</strong> Maximum effort, minimum distance. <br> This distance is considered one
               of the hardest, having to go all out for the entire race.
-              <br></br>
+              <br>
               Distance :<br> 750m swim<br> 20km bike<br> 5km run
             </p>
           </div>
         </div>
       </div>
 
+      <!-- Olympic Distance Card -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_olympic.png');"></div>
@@ -82,13 +113,14 @@
             <p> <strong>Olympic Distance:</strong>
               Maximum effort, extended distance. Requires a sustained high effort across all three disciplines,
               demanding both speed and endurance.
-              <br></br>
+              <br>
               Distance: <br> 1.5km swim <br> 40km bike <br> 10km run
             </p>
           </div>
         </div>
       </div>
 
+      <!-- Half Ironman Distance Card -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_70.3.png');"></div>
@@ -96,13 +128,14 @@
             <p> <strong>Half Ironman:</strong>
               Maximum effort, extended distance. Requires a sustained high effort across all three disciplines,
               demanding both speed and endurance.
-              <br></br>
+              <br>
               Distance: <br> 1.5km swim <br> 40km bike <br> 10km run
             </p>
           </div>
         </div>
       </div>
 
+      <!-- Full Ironman Distance Card -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front" style="background-image: url('../images/triathlon_distance_ironman.png');"></div>
@@ -110,7 +143,7 @@
             <p> <strong>Full Ironman:</strong>
               Extreme endurance, mental fortitude. The ultimate test of endurance, pushing athletes to their physical
               and mental limits for an entire day
-              <br></br>
+              <br>
               Distance: <br> 3.8km swim <br> 180km bike <br> 42.2km run
             </p>
           </div>
@@ -120,14 +153,11 @@
     </div>
   </section>
 
-  <section class="image-separator">
-    <img src="../images/background_image_hex.png" alt="Separator Image">
-  </section>
-
-
+  <!-- Training Topics Section -->
   <section class="training-topics">
     <div class="card-grid">
 
+      <!-- Prepare Card -->
       <div class="topic-card">
         <img src="../images/healthy_prepare1.png" alt="Prepare">
         <div class="card-content">
@@ -138,6 +168,7 @@
         </div>
       </div>
 
+      <!-- Fuel Card -->
       <div class="topic-card">
         <img src="../images/healthy_meal.png" alt="Fuel">
         <div class="card-content">
@@ -148,20 +179,23 @@
         </div>
       </div>
 
+      <!-- Recovery Card -->
       <div class="topic-card">
         <img src="../images/healthy_recovery1.png" alt="Recover">
         <div class="card-content">
           <h3>Recover</h3>
           <p>Maximize performance through proper recovery — mobility, rest, and restoration techniques that work.</p>
-          <a href="recover.html" class="learn-btn">Learn More <span>→</span></a>
+          <a href="recovery.html" class="learn-btn">Learn More <span>→</span></a>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- Highlights Section : Auto-scrolling section with links to key pages and info -->
   <section class="highlights auto-scroll">
     <div class="highlight-track">
+
       <div class="highlight">
         <h3><a href="events.html">Upcoming Events</a></h3>
         <p>Check out our latest triathlon events happening across the region. Stay updated and find the next race near
@@ -181,18 +215,19 @@
       </div>
 
       <div class="highlight">
-        <h3><a href="recover.html">Recovery</a></h3>
+        <h3><a href="recovery.html">Recovery</a></h3>
         <p>Maximize gains and avoid burnout with strategic rest days, stretching techniques, and recovery nutrition.</p>
       </div>
 
       <div class="highlight">
-        <h3><a href="emissions.html">Join the Community</a></h3>
+        <h3><a href="community.html">Join the Community</a></h3>
         <p>Connect with other triathletes, share your progress, and be inspired. We grow stronger together!</p>
       </div>
 
       <div class="highlight">
-        <h3><a href="rankings.html">Rankings</a></h3>
-        <p>See who’s crushing the leaderboard. Track top-performing triathletes and get motivated to rise up the ranks.
+        <h3><a href="about.html">About Us</a></h3>
+        <p>Meet the people who made this website. Discover how we worked as a team and through extensive collaborative
+          work, made this.
         </p>
       </div>
 
@@ -223,7 +258,7 @@
       </div>
 
       <div class="highlight">
-        <h3><a href="recover.html">Recovery</a></h3>
+        <h3><a href="recovery.html">Recovery</a></h3>
         <p>Maximize gains and avoid burnout with strategic rest days, stretching techniques, and recovery nutrition.</p>
       </div>
 
@@ -233,8 +268,9 @@
       </div>
 
       <div class="highlight">
-        <h3><a href="rankings.html">Rankings</a></h3>
-        <p>See who’s crushing the leaderboard. Track top-performing triathletes and get motivated to rise up the ranks.
+        <h3><a href="about.html">About Us</a></h3>
+        <p>Meet the people who made this website. Discover how we worked as a team and through extensive collaborative
+          work, made this.
         </p>
       </div>
 
@@ -247,10 +283,7 @@
     </div>
   </section>
 
-
-
-
-  <!-- FOOTER -->
+  <!-- FOOTER SECTION -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-brand">
@@ -258,6 +291,7 @@
         <p>Inspiring strength, endurance, and unity through triathlons.</p>
       </div>
 
+      <!-- Footer Navigation Links -->
       <div class="footer-links horizontal">
         <div class="footer-group">
           <h4><a href="about.html">About</a></h4>
@@ -266,15 +300,18 @@
           <h4><a href="events.html">Events</a></h4>
         </div>
         <div class="footer-group">
-          <h4><a href="#">Training</a></h4>
+          <h4><a href="prepare.html">Training</a></h4>
           <ul>
             <li><a href="prepare.html">Prepare</a></li>
             <li><a href="fuel.html">Fuel</a></li>
-            <li><a href="recover.html">Recover</a></li>
+            <li><a href="recovery.html">Recover</a></li>
           </ul>
         </div>
         <div class="footer-group">
           <h4><a href="emissions.html">Sustainability</a></h4>
+        </div>
+        <div class="footer-group">
+          <h4><a href="community.html">Community</a></h4>
         </div>
       </div>
     </div>
@@ -283,9 +320,6 @@
       <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
     </div>
   </footer>
-
-
-
 
 </body>
 

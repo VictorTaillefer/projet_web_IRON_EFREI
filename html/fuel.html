@@ -2,34 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Document Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
     <title>IRON'EFREI - Home</title>
+
+    <!-- We decided to use Monserrat as both our headings and body font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/fuel.css">
 
+    <!-- JavaScript file for interactive features -->
     <script src="../js/script.js"></script>
+
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 </head>
 
 <body>
 
-    <!-- Header with navigation -->
+    <!-- HEADER SECTION -->
     <header>
 
+        <!-- Hamburger Menu Button (for mobile navigation) -->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <!-- Logo Section -->
         <div class="logo">
-            <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+            <a href="home.html">
+                <img src="../images/logo_ironefrei.png" alt="IRON'EFREI Logo">
+            </a>
         </div>
 
-        <!-- Navigation links -->
+        <!-- Navigation Links -->
         <nav class="nav-links">
             <ul id="navLinks">
+
+                <!-- Main Navigation Items -->
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="events.html">Events</a></li>
 
-                <li class="dropdown">
+                <!-- Dropdown Menu for Training Subpages (visible only on desktop) -->
+                <li class="dropdown desktop-only">
                     <span class="dropdown-trigger">Training ▾</span>
                     <ul class="dropdown-menu">
                         <li><a href="prepare.html">Prepare</a></li>
@@ -38,14 +59,22 @@
                     </ul>
                 </li>
 
+                <!-- Individual Training Links for Mobile View (no dropdown) -->
+                <li class="mobile-only"><a href="prepare.html">Prepare</a></li>
+                <li class="mobile-only"><a href="fuel.html">Fuel</a></li>
+                <li class="mobile-only"><a href="recovery.html">Recover</a></li>
+
                 <li><a href="community.html">Community</a></li>
                 <li><a href="emissions.html">Emissions</a></li>
+
             </ul>
         </nav>
 
     </header>
 
-    <!-- MAIN BODY -->
+    <!-- MAIN BODY CONTENT -->
+
+    <!-- Hero Section -->
     <section class="hero">
         <h1>Triathlon Nutrition Guide</h1>
         <p>Fuel Your Body. Maximize Performance. Recover Faster.</p>
@@ -59,7 +88,8 @@
                 nutrition is essential to support endurance, performance, and recovery.</p>
             <ul>
                 <li>Muscles rely on glycogen (stored carbohydrates) and fat for sustained energy.</li>
-                <li>Electrolytes such as sodium, potassium, and magnesium are lost through sweat and need replenishment.</li>
+                <li>Electrolytes such as sodium, potassium, and magnesium are lost through sweat and need replenishment.
+                </li>
                 <li>Dehydration can reduce endurance and impair mental focus.</li>
                 <li>Muscle breakdown increases, especially during longer events or back-to-back training days.</li>
             </ul>
@@ -413,7 +443,7 @@
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER SECTION -->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -421,6 +451,7 @@
                 <p>Inspiring strength, endurance, and unity through triathlons.</p>
             </div>
 
+            <!-- Footer Navigation Links -->
             <div class="footer-links horizontal">
                 <div class="footer-group">
                     <h4><a href="about.html">About</a></h4>
@@ -429,15 +460,18 @@
                     <h4><a href="events.html">Events</a></h4>
                 </div>
                 <div class="footer-group">
-                    <h4><a href="#">Training</a></h4>
+                    <h4><a href="prepare.html">Training</a></h4>
                     <ul>
                         <li><a href="prepare.html">Prepare</a></li>
                         <li><a href="fuel.html">Fuel</a></li>
-                        <li><a href="recover.html">Recover</a></li>
+                        <li><a href="recovery.html">Recover</a></li>
                     </ul>
                 </div>
                 <div class="footer-group">
                     <h4><a href="emissions.html">Sustainability</a></h4>
+                </div>
+                <div class="footer-group">
+                    <h4><a href="community.html">Community</a></h4>
                 </div>
             </div>
         </div>
@@ -446,7 +480,6 @@
             <p>&copy; 2025 IRON'EFREI. All rights reserved.</p>
         </div>
     </footer>
-
 
 </body>
 
